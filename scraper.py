@@ -14,7 +14,7 @@ def scrape_table(root):
     for row in rows:
         # Set up our data record - we'll need it later
         record = {}
-        table_cells = row.cssselect("td")
+        table_cells = row.cssselect("th")
         if table_cells: 
             record['Release date'] = table_cells[0].text
             record['Artist'] = table_cells[1].text
@@ -23,7 +23,7 @@ def scrape_table(root):
             record['Label'] = table_cells[4].text
 
             # Print out the data we've gathered
-            print record, 'Artist'
+            print record, '------------'
             # Finally, save the record to the datastore - 'Artist' is our unique key
             scraperwiki.sqlite.save(["Artist"], record)
         
