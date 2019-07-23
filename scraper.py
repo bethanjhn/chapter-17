@@ -23,7 +23,7 @@ def scrape_table(root):
             record['Label'] = table_cells[4].text
 
             # Print out the data we've gathered
-            print record, '------------'
+            print record, 'Artist'
             # Finally, save the record to the datastore - 'Artist' is our unique key
             scraperwiki.sqlite.save(["Artist"], record)
         
