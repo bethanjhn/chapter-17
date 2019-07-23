@@ -45,6 +45,6 @@ def scrape_table(root):
 # START HERE: define your starting URL - then 
 # call a function to scrape the first page in the series.
 # ---------------------------------------------------------------------------
-base_url = 'https://en.wikipedia.org/wiki'
-starting_url = urlparse.urljoin(base_url, '/List_of_2019_albums')
+base_url = 'https://paulbradshaw.github.io'
+starting_url = urlparse.urljoin(base_url, '/scraping-for-everyone/webpages/example_table_1.html')
 # scrape_and_look_for_next_link(starting_url)
