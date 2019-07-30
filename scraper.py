@@ -32,11 +32,11 @@ def scrape_table(jim):
         
 # # scrape_and_look_for_next_link function: calls the scrape_table
 # # function, then hunts for a 'next' link: if one is found, calls itself again
-def scrape_and_look_for_next_link(url):
-    html = scraperwiki.scrape(url)
+def scrape_and_look_for_next_link(starting_url):
+    html = scraperwiki.scrape(starting_url)
     print html
-    jim = lxml.html.fromstring(html)
-    scrape_table(jim)
+    root = lxml.html.fromstring(html)
+    scrape_table(root)
 #     Below would find a next button on the page and select it, then loop through that page etc
 #     next_link = root.cssselect("a.next")
 #     print next_link
