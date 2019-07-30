@@ -36,7 +36,7 @@ def scrape_and_look_for_next_link(url):
     html = scraperwiki.scrape(url)
     print html
     root = lxml.html.fromstring(html)
-#     scrape_table(root)
+    scrape_table(root)
 #     Below would find a next button on the page and select it, then loop through that page etc
 #     next_link = root.cssselect("a.next")
 #     print next_link
